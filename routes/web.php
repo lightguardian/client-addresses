@@ -2,23 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-// O cliente deve possuir as opções básicas de uma API REST
-// o [/clientes][POST] Cadastro do cliente.
-// o [/clientes][GET] Listagem de clientes.
-// o [/clientes/:idCliente][GET] Listagem de um cliente específico.
-// o [/clientes/:idCliente][PUT] Alteração do cliente.
-// o [/clientes/:idCliente][DELETE] Exclusão do cliente.
-
-// • Assim como as funções básicas do cliente, os endereços também devem possuir:
-// o [/clientes/:idCliente/enderecos][POST] Cadastro de endereços do cliente.
-// o [/clientes/:idCliente/enderecos][GET] Listagem de endereços do cliente.
-// o [/clientes/:idCliente/enderecos/:idEndereco][GET] Listagem de um endereço
-// específico do cliente.
-// o [/clientes/:idCliente/enderecos/:idEndereco][PUT] Alteração de um endereço.
-// o [/clientes/:idCliente/enderecos/:idEndereco][DELETE] Exclusão de um endereço.
-
 //PATHS
-
 
 const CLIENTS = '/clientes';
 const ADDRESSES = '/clientes/{client_id}/enderecos';

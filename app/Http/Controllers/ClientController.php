@@ -14,9 +14,6 @@ class ClientController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-
-   
-
     public function index()
     {
         $client = Client::all();
@@ -54,11 +51,8 @@ class ClientController extends Controller
         try {
             $client = new Client();
 
-            
-
             $client->trade_name = $request->trade_name;
             $client->legal_name = $request->legal_name;
-
 
             $client->cnpj = $request->cnpj;
             $client->timestamps = false; 
@@ -75,9 +69,7 @@ class ClientController extends Controller
                 'error' => 'internal server error',
                 //'details' => $errorInfo,
             ],500);
-            
         }
-         
     }
 
     /**
@@ -89,11 +81,9 @@ class ClientController extends Controller
     public function show($id)
     {
         $client = Client::where('id',$id)->first();
-
         return $client != null  ? $client->toJson() : response()->json([
             'error' => 'client with id {' . $id .'} not found',
         ],404);
-
     }
 
     /**
@@ -116,7 +106,6 @@ class ClientController extends Controller
      */
     public function update(Request $request, $id)
     {
-
         try {
             $client = Client::find($id);
 
@@ -129,11 +118,7 @@ class ClientController extends Controller
             $client->timestamps = false; 
             return response()->json($client,200);
 
-         
-
-
         } catch (QueryException $exception) {
-            
             
             $errorInfo = $exception->errorInfo;
 
@@ -162,15 +147,12 @@ class ClientController extends Controller
 
         } catch (QueryException $exception) {
             
-            
             $errorInfo = $exception->errorInfo;
 
             return response()->json([
                 'error' => 'internal server error',
                 //'details' => $errorInfo,
             ],500);
-            
         } 
-         
     }
 }

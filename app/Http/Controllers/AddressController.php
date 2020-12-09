@@ -11,9 +11,6 @@ use App\Client;
 class AddressController extends Controller
 {
 
-   
-
-
     private function validation(&$client, &$address,&$client_id, &$address_id) {
 
         $address = Address::find($address_id);
