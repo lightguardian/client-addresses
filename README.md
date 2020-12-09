@@ -62,19 +62,19 @@ URL   |  Tipo
 
 - Para popular as tabelas:
 
-1. **composer dump-autoload**
-1. **php artisan db:seed** 
+    1. **composer dump-autoload**
+    1. **php artisan db:seed** 
 
-    > Para popular todas as tabelas;
+        > Para popular todas as tabelas;
 
-1. **php artisan db:seed --class=ClientSeeder**
+    1. **php artisan db:seed --class=ClientSeeder**
 
-    > Para popoular a tabela de Clientes
+        > Para popoular a tabela de Clientes
 
-1. **php artisan db:seed --class=AddressSeeder**
+    1. **php artisan db:seed --class=AddressSeeder**
 
 
-    > Criei também uma função recursiva chamada ***randomNumericString($length)***, passa-se um inteiro para ela e ela retorna um string numérico com o comprimento(length) passado.        
+        > Criei também uma função recursiva chamada ***randomNumericString($length)***, passa-se um inteiro para ela e ela retorna um string numérico com o comprimento(length) passado.        
 
 
 
