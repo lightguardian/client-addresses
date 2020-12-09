@@ -2,8 +2,6 @@
 
 > CRUD criado no modelo API REST afim de guardar o endereço de clientes.
 
-### Tecnologias/Frameworks 
----
 - <a href="https://laravel.com/docs/7.x/" target="_blank">Laravel versão 7</a>
 
 
@@ -62,16 +60,21 @@ URL   |  Tipo
 ### Semente
 ---
 
--Para popular as tabelas:
-0. composer dump-autoload
-0. php artisan db:seed 
+- Para popular as tabelas:
+
+1. **composer dump-autoload**
+1. **php artisan db:seed** 
+
     > Para popular todas as tabelas;
-0. php artisan db:seed --class=ClientSeeder
+
+1. **php artisan db:seed --class=ClientSeeder**
+
     > Para popoular a tabela de Clientes
-0. php artisan db:seed --class=AddressSeedercomprimento devido a relação de colunas
+
+1. **php artisan db:seed --class=AddressSeeder**
 
 
-- Criei também uma função recursiva chamada *randomNumericString()*, passa-se um inteiro para ela e ela retorna um string numérico com o comprimento(length) passado.        
+    > Criei também uma função recursiva chamada ***randomNumericString($length)***, passa-se um inteiro para ela e ela retorna um string numérico com o comprimento(length) passado.        
 
 
 
