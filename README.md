@@ -6,16 +6,17 @@
 
 
 ### API/CRUD
----
 
+
+- É necessário criar o banco de dados e configurar o arquivo **app/.env**;
 - Criado um controlador para as rotas: GET, POST, PUT, DELETE;
 - Caso a requisição ocorra com sucesso, será retornado um JSON com o objeto inserido;
 - Retornará o status_code apropriado conforme a requisição;
 
 ### Template JSON para consulta API
----
 
 #### Cliente
+
 
 {
   "id": 1,
@@ -26,6 +27,8 @@
 }
 
 #### Endereço
+
+
 {
 	"client_id":1,
 	"road":"Logradouro",
@@ -35,7 +38,6 @@
 }
 
 ### Rotas
----
 
 ##### Clientes
 
@@ -58,7 +60,6 @@ URL   |  Tipo
 /clientes/{id}/enderecos/{id2} | Delete
 
 ### Semente
----
 
 - Para popular as tabelas:
 
