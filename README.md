@@ -10,10 +10,9 @@
 ### API/CRUD
 ---
 
-- Criado um controlador para cada rota especificada: GET, POST, PUT, DELETE;
-- Caso a operação ocorra com sucesso, será retornado um JSON com o objeto inserido;
-- A API retornará **"erro interno"** caso haja um erro no banco de dados;
-- Dependendo do erro retornará o status_code apropriado, tentei tratar o máximo possível;
+- Criado um controlador para as rotas: GET, POST, PUT, DELETE;
+- Caso a requisição ocorra com sucesso, será retornado um JSON com o objeto inserido;
+- Retornará o status_code apropriado conforme a requisição;
 
 ### Template JSON para consulta API
 ---
@@ -64,12 +63,12 @@ URL   |  Tipo
 ---
 
 -Para popular as tabelas:
-    0. composer dump-autoload
-    0. php artisan db:seed 
-        > Para popular todas as tabelas;
-    0. php artisan db:seed --class=ClientSeeder
-        > Para popoular a tabela de Clientes
-    0. php artisan db:seed --class=AddressSeedercomprimento devido a relação de colunas
+0. composer dump-autoload
+0. php artisan db:seed 
+    > Para popular todas as tabelas;
+0. php artisan db:seed --class=ClientSeeder
+    > Para popoular a tabela de Clientes
+0. php artisan db:seed --class=AddressSeedercomprimento devido a relação de colunas
 
 
 - Criei também uma função recursiva chamada *randomNumericString()*, passa-se um inteiro para ela e ela retorna um string numérico com o comprimento(length) passado.        

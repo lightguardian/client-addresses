@@ -41,6 +41,6 @@ Route::delete(ADDRESSES . '/{address_id}', 'AddressController@destroy')->name('a
 
 Route::get('/', function () {
 
-    echo '<h1><a href="https://github.com/lightguardian/client-adresses/README.md" target="_blank">Utilização</a></h1>';
+    echo '<h1><a href="https://github.com/lightguardian/client-adresses/blob/master/README.md" target="_blank">Utilização</a></h1>';
 
 });
