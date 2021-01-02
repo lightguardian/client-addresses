@@ -16,7 +16,6 @@ class ClientController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-
     public function index()
     {
 
@@ -117,6 +116,14 @@ class ClientController extends Controller
         try {
             $client = Client::find($id);
 
+            if ($client == null) 
+            {
+                return response()->json([
+                    'error' => 'client {' . $id .'} doesn\'t exist',
+                ],500);
+            }  
+                 
+
             $client->trade_name = $request->trade_name != null ? $request->trade_name : $client->trade_name;
             $client->legal_name = $request->legal_name != null ? $request->legal_name : $client->legal_name;
             $client->cnpj = $request->cnpj != null ? $request->cnpj : $client->cnpj;
@@ -149,9 +156,15 @@ class ClientController extends Controller
     {
         try {
             $client = Client::find($id);
-
-            $client->delete();
-            return $client->toJson();
+            if ($client != null) 
+            {
+                $client->delete(); 
+                return $client->toJson();
+            }  
+                 
+            return response()->json([
+                'error' => 'client {' . $id .'} doesn\'t exist',
+            ],500);
 
         } catch (QueryException $exception) {
             
@@ -163,4 +176,5 @@ class ClientController extends Controller
             ],500);
         } 
     }
+
 }

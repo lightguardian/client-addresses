@@ -8,8 +8,6 @@ use Illuminate\Support\Facades\Route;
 const CLIENTS = 'clientes';
 const ADDRESSES = 'clientes/{client_id}/enderecos';
 
-
-
 Route::get(CLIENTS,'Api\\ClientController@index')->name('client.index');
 Route::post(CLIENTS,'Api\\ClientController@store')->name('client.store');
 Route::get(CLIENTS . '/{id}', 'Api\\ClientController@show')->name('client.show');
@@ -26,7 +24,7 @@ Route::delete(ADDRESSES . '/{address_id}', 'Api\\AddressController@destroy')->na
 
 Route::get('/', function () {
 
-    echo '<h1><a href="https://github.com/lightguardian/client-adresses/blob/master/README.md" target="_blank">Utilização</a></h1>';
+    echo '<h1><a href="https://github.com/lightguardian/client-adresses/blob/master/README.md" target="_blank">Descrição</a></h1>';
 
 });
 
