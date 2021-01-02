@@ -1,9 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
 use Illuminate\Database\QueryException;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+
 use App\Client;
 
 class ClientController extends Controller
@@ -14,11 +16,16 @@ class ClientController extends Controller
      * @return \Illuminate\Http\Response
      */
 
+
     public function index()
     {
-        $client = Client::all();
 
+       
+
+        return $client = Client::all();
         return $client->toJson();
+
+
      
     }
 
@@ -40,6 +47,7 @@ class ClientController extends Controller
      */
     public function store(Request $request)
     {   
+        
         $client = Client::where('cnpj', $request->cnpj)->first();
 
         if($client != null)

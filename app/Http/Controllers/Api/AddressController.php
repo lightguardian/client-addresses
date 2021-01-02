@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
 use Illuminate\Database\QueryException;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+
 use App\Address;
 use App\Client;
-
 
 class AddressController extends Controller
 {
@@ -53,8 +54,8 @@ class AddressController extends Controller
 
         $address = Address::where('client_id', $client_id)->get();
 
-        return $address->toJson();
-     
+        return response()->json($address,200);
+    
     }
 
     /**
