@@ -74,8 +74,9 @@ URL   |  Tipo
 
     1. **php artisan db:seed --class=AddressSeeder**
 
-
-        > Criei também uma função recursiva chamada ***randomNumericString($length)***, passa-se um inteiro para ela e ela retorna um string numérico com o comprimento(length) passado.        
+	
+- randomNumericString(int $length):	
+	Retorna um string numérico do tamanho do $length passado, útil para gerar CPF, CEPS ou CNPJS aleatórios.        
 
 
 
